@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ChessBoard</title>
+	<script type="text/javascript" language="javascript">
+		let result = "";
+		let row, col;
+		for(row = 0; row < 8; row++)
+		{
+			for(col = 0; col < 8; col++)
+			{
+				if((row + col) % 2 == 0)
+				{
+				result = result +  " ";
+				}
+				else
+				{
+				result = result + "#";
+				}
+			}
+			result = result + "\n";
+		}
+		console.log(result);
+	</script>
+	<noscript>
+		Please Enable the Javascript
+	</noscript>
+</head>
+<body>
+
+</body>
+</html>
