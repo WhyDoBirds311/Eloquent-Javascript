@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 2 : 2 - recursion</title>
+</head>
+<script type="text/javascript" language="javascript">
+	    function isEven(current)
+	    {
+			if(current == 0) {
+				return true;
+			}
+			else if(current == 1)
+			{
+				return  false;
+			}
+			else if(current < 0)
+			{
+				current *= -1;
+				return isEven(current);
+			}
+			else 
+			{
+				return isEven(current-2);
+			}
+		}
+		
+</script>
+<body>
+
+</body>
+</html>
