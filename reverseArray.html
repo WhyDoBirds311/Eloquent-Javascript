@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse Array Chapter 3 : Problem 2</title>
+	<script type="text/javascript" language="javascript">
+
+		function reverseArray(array)
+		{
+			let arr = [];
+			let temp = [];
+
+			for(let i = 0; i <= array.length-1; i++)
+			{
+				temp.push(array[i]);	
+			}
+
+			for(let j = temp.length-1; j >= 0 ; j--)
+			{
+				arr.push(temp[j]);
+			}
+
+			return arr;
+		}
+
+		function reverseArrayInPlace(array)
+		{
+			let arrlen = array.length;
+
+			for(let i = 0; i < Math.floor(arrlen/2); i++)
+			{
+				let temp;
+					temp = array[i];
+					array[i] = array[arrlen-1-i];
+					array[arrlen-1-i] = temp;
+			}
+
+			return array;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
