@@ -21,25 +21,25 @@
 
 	function listToArray(list) 
 	{
-  		let result = [];
-  		if (typeof list === 'undefined' || list.value === undefined || list.rest === undefined) 
-  		{
-    			return result;
-  		}
-  		else 
-  		{
-    		result.push(list.value);
-    		
-    		while (list.hasOwnProperty('rest') && list.rest !== null) 
-    		{
-      			list = list.rest;
-      		if (list.hasOwnProperty('value')) 
-      		{
-      			result.push(list.value);
-     	 	}
-    	}
- 	}
-  	return result;
+	  		let arr = [];
+	  		if (typeof list === 'undefined' || list.value === undefined || list.rest === undefined) 
+	  		{
+	    			return result;
+	  		}
+	  		else 
+	  		{
+	    		arr.push(list.value);
+	    		
+	    		while (list.hasOwnProperty('rest') && list.rest !== null) 
+	    		{
+	      			list = list.rest;
+	      		if (list.hasOwnProperty('value')) 
+	      		{
+	      			arr.push(list.value);
+	     	 	}
+	    	}
+	 	}
+	  	return result;
 	}
 		function prepend(element, list)
 		{

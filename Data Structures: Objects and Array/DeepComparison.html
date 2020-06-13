@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DeepEqual</title>
+	<script type="text/javascript" language="javascript">
+		function deepEqual(obj1, obj2) 
+		{
+			if((typeof obj1 == "object" && obj2 != null) && (typeof obj2 == 'object' && obj2 != null)) 
+			{
+				let obj1_len = Object.keys(obj1).length;
+				let obj2_len = Object.keys(obj2).length;
+				
+				if(obj1_len === obj2_len)
+				{
+					let prop_obj1 = Object.getOwnPropertyNames(obj1);
+					let prop_obj2 = Object.getOwnPropertyNames(obj2);
+					let val_obj1 = Object.values(obj1);
+					let val_obj2 = Object.values(obj2);
+					let count_prop = 0;
+					let count_val = 0;
+
+					for(let prop = 0; prop < prop_obj1.length; prop++)
+					{
+						let propName = prop_obj1[prop];
+
+						if(prop_obj1[propName] !== prop_obj2[propName])
+						{
+							return false;
+						}
+						else
+						{
+							count_prop++;
+						}
+					}
+
+					for(let val = 0; val < val_obj1.length; val++)
+					{
+						let valData = val_obj1[val];
+
+						if(val_obj1[valData] !== val_obj2[valData])
+						{
+							return false;
+						}
+						else
+						{
+							count_val++;
+						}
+					} 
+
+					if(count_prop === count_val)
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else
+			{
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
